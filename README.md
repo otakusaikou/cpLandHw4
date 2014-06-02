@@ -8,7 +8,7 @@ Description: <br>
  This program is an example of assign4, which can calculate area, perimeter and every length of polygon.<br>
  Polygon information is defined in ASCII file (example input file is 'data1.in' and 'data2.in').
  
-----------Update 2014/06/02 15:29----------
-Bug in function 'readData' fixed.
-----------Update 2014/06/02 15:29----------
+----------Update 2014/06/02 15:29---------- <br>
+Bug in function 'readData' fixed. <br>
+----------Update 2014/06/02 15:29---------- <br>
  
