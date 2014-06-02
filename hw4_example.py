@@ -29,15 +29,15 @@ def readData(filename):
 #This function can calculate area of points with three lists, pname, x and y
 def getArea(pname, x, y):
     Area = 0
-    #Num is number of points
+    #Variable num is number of points
     num = len(pname)
     for i in range(num):
-        Area += (x[i % num] * y[(i + 1) % num]) - (y[i % num] * x[(i + 1) % num]) #Calculate polygon area with formula: ((X1Y2 - Y1X2) + (X2Y3 - Y2X3)+...(XxY1-YyX1)) / 2 = polygon's area.
+        Area += (x[i] * y[(i + 1) % num]) - (y[i] * x[(i + 1) % num]) #Calculate polygon area with formula: ((X1Y2 - Y1X2) + (X2Y3 - Y2X3)+...(XxY1-YyX1)) / 2 = polygon's area.
     return 1.0 * abs(Area) / 2
     
 #This function can calculate every length of polygon
 def getLength(pname, x, y):
-    #variable num is number of points
+    #Variable num is number of points
     num = len(pname)
     _from = []
     _to = []
@@ -45,7 +45,7 @@ def getLength(pname, x, y):
     for i in range(num):
         _from.append(pname[i % num])
         _to.append(pname[(i + 1) % num])
-        length.append(math.sqrt((x[i % num] - x[(i + 1) % num])**2 + (y[i % num] - y[(i + 1) % num])**2))
+        length.append(math.sqrt((x[i] - x[(i + 1) % num])**2 + (y[i] - y[(i + 1) % num])**2))
     return _from, _to, length
 
 #This function can write out result
@@ -118,7 +118,6 @@ def plotPolygon(x, y):
     ax.xaxis.set_major_formatter(formatter)
     ax.yaxis.set_major_formatter(formatter)
 
-
     #Set axis labels
     plt.xlabel("x")
     plt.ylabel("y")
@@ -126,7 +125,6 @@ def plotPolygon(x, y):
     #Use grid
     plt.grid()
     plt.show()
-    
 
 if __name__ == "__main__":
     if debug:

@@ -12,3 +12,7 @@ Description: <br>
 Bug in function 'readData' fixed. <br>
 ----------Update 2014/06/02 15:29---------- <br>
  
+----------Update 2014/06/02 17:56---------- <br>
+Bug in function 'getArea' and 'getLength' fixed. <br>
+----------Update 2014/06/02 17:56---------- <br>
+ 
