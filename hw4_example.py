@@ -10,6 +10,8 @@ def readData(filename):
     
     #Read all the lines to a list
     lines = fin.readlines()
+
+    fin.close()
     
     #Create empty lists for point name, x and y
     pname = []
